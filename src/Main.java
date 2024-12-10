@@ -23,6 +23,14 @@ public class Main {
         moda.agregarProducto(new Revista("Vogue",150,"vg4379","conocida por su estilo elegante y contenido de alta calidad que abarca moda, belleza, cultura y estilo de vida.","abril 2024"));
         moda.agregarProducto(new Revista("¡Hola!",100,"hl4368","revista de celebridades y entretenimiento. Esta revista ofrece una mezcla de noticias de celebridades, eventos sociales, moda y estilo de vida.","septiembre 2024"));
 
+        Libreria libreria = new Libreria("Mi Libreria", new ArrayList<>());
+        libreria.agregarCategoria(cienciaFiccion);
+        libreria.agregarCategoria(novela);
+        libreria.agregarCategoria(divulgacion);
+        libreria.agregarCategoria(moda);
+
+        libreria.mostrarInventario().stream().forEach(categoria-> System.out.printf(categoria.toString()+"\n"));
+
         Inventario inventario = new Inventario(new ArrayList<>());
 
         cienciaFiccion.getProductos().stream().forEach(libro -> inventario.agregarProducto(libro));

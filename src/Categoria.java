@@ -9,11 +9,15 @@ public class Categoria {
         this.productos = productos;
     }
 
-    void agregarProducto(Producto producto) {
+    public void agregarProducto(Producto producto) {
         productos.add(producto);
     }
 
-    List<Producto> getProductos() {
+    public List<Producto> getProductos() {
         return productos;
+    }
+
+    public String toString(){
+        return nombre;
     }
 }
